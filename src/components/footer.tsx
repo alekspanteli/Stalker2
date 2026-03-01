@@ -136,8 +136,11 @@ export function Footer() {
 
         <Separator className="mb-8 bg-stalker-cream/5" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stalker-cream/70">
+        <div className="flex flex-col items-center gap-2 text-sm text-stalker-cream/70">
           <p>&copy; {new Date().getFullYear()} GSC Game World. All rights reserved.</p>
+          <p className="text-center text-xs text-stalker-cream/60">
+            Unofficial fan-made site. S.T.A.L.K.E.R. 2 and all related rights belong to GSC Game World.
+          </p>
           <div className="flex gap-6">
             <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors">Privacy Policy</a>
             <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors">Terms of Service</a>

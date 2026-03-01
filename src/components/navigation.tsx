@@ -47,15 +47,15 @@ export function Navigation() {
       }`}
     >
       <Container>
-        <div className="flex items-center justify-between h-20 gap-8">
+        <div className="flex items-center justify-between h-16 md:h-20 gap-6 md:gap-8">
           <a href="#" className="flex-shrink-0 flex items-center">
             <Image
               src="/logo-S2.png"
               alt="S.T.A.L.K.E.R. 2"
-              width={160}
-              height={40}
+              width={658}
+              height={225}
+              className="h-7 w-auto md:h-10"
               priority
-              style={{ width: 160, height: 40 }}
             />
           </a>
 

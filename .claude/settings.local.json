@@ -11,7 +11,9 @@
       "Bash(python3 -c \":*)",
       "Bash(node -e \":*)",
       "WebFetch(domain:vectorseek.com)",
-      "Bash(curl -sL \"https://www.stalker2.com/stalker2/logos/logo-S2.png\" -o c:/myprojects/Stalker2/public/logo-S2.png)"
+      "Bash(curl -sL \"https://www.stalker2.com/stalker2/logos/logo-S2.png\" -o c:/myprojects/Stalker2/public/logo-S2.png)",
+      "Bash(npm install @radix-ui/react-visually-hidden)",
+      "Bash(ls -la \"c:\\\\myprojects\\\\Stalker2\\\\src\"\" 2>/dev/null || echo \"src directory structure failed \")"
     ]
   }
 }

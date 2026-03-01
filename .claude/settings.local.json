@@ -3,7 +3,13 @@
     "allow": [
       "Bash(npm install)",
       "Bash(npx next build)",
-      "Bash(npm install next@latest)"
+      "Bash(npm install next@latest)",
+      "WebFetch(domain:www.stalker2.com)",
+      "Bash(curl -sI \"https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1643320/ss_0a7bf2e2c7e1fc9dbabf249f1fffc594dbc0f2a4.1920x1080.jpg\")",
+      "WebFetch(domain:store.steampowered.com)",
+      "Bash(curl -s \"https://store.steampowered.com/api/appdetails?appids=1643320\")",
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)"
     ]
   }
 }

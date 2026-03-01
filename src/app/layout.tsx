@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+  title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl — Official Website",
   description:
     "Discover the massive Chornobyl Exclusion Zone full of dangerous enemies, deadly anomalies and powerful artifacts. Pre-order now.",
   openGraph: {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-black text-gray-100 antialiased">
+      <body className="min-h-screen bg-stalker-dark text-stalker-cream antialiased">
         {children}
       </body>
     </html>

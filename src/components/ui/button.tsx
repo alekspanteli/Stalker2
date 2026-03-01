@@ -5,20 +5,20 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium uppercase tracking-wider transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-stalker-orange/50 font-['Oswald',sans-serif]",
   {
     variants: {
       variant: {
-        default: "bg-white text-black hover:bg-gray-200",
+        default: "bg-stalker-orange text-stalker-dark hover:bg-stalker-orange/80",
         outline:
-          "border border-white text-white hover:bg-white hover:text-black",
-        ghost: "hover:bg-white/10 text-white",
-        link: "text-white underline-offset-4 hover:underline",
+          "border border-stalker-cream/30 text-stalker-cream hover:border-stalker-orange hover:text-stalker-orange",
+        ghost: "hover:bg-stalker-cream/10 text-stalker-cream",
+        link: "text-stalker-orange underline-offset-4 hover:underline",
       },
       size: {
         default: "h-12 px-8 py-3",
-        sm: "h-9 px-4",
-        lg: "h-14 px-12 py-5 text-lg",
+        sm: "h-9 px-4 text-xs",
+        lg: "h-14 px-12 py-5 text-base",
         icon: "size-12",
       },
     },

@@ -46,23 +46,26 @@ const EDITIONS: Edition[] = [
 
 export function Editions() {
   return (
-    <section id="editions" className="py-32 px-6 md:px-12 lg:px-20 bg-zinc-950">
-      <div className="max-w-[1920px] mx-auto">
+    <section id="editions" className="py-32 px-6 md:px-12 bg-stalker-dark">
+      <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-6">
-            PRE-ORDER NOW
+          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-['Oswald',sans-serif] font-light mb-4 block">
+            Available Now
+          </span>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 font-['Oswald',sans-serif] text-stalker-cream">
+            PRE-ORDER <span className="text-stalker-orange">NOW</span>
           </h2>
-          <p className="text-gray-400 text-xl font-light max-w-3xl mx-auto">
+          <p className="text-stalker-cream/50 text-lg font-light max-w-2xl mx-auto">
             Choose your edition and prepare to enter the Zone
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4">
           {EDITIONS.map((edition, index) => (
             <motion.div
               key={edition.name}
@@ -71,24 +74,29 @@ export function Editions() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
               className={cn(
-                "bg-black border p-10 transition-all",
+                "relative bg-[#0a0a09] border p-10 transition-all duration-500 overflow-hidden group",
                 edition.isFeatured
-                  ? "border-white md:scale-105"
-                  : "border-zinc-800 hover:border-white"
+                  ? "border-stalker-orange/50 md:scale-105"
+                  : "border-stalker-cream/10 hover:border-stalker-cream/25"
               )}
             >
               {edition.isFeatured && (
-                <Badge className="mb-4">MOST POPULAR</Badge>
+                <>
+                  <div className="absolute top-0 left-0 w-full h-[2px] bg-stalker-orange" />
+                  <Badge className="mb-6">Most Popular</Badge>
+                </>
               )}
-              <h3 className="text-2xl font-black mb-4 tracking-tight">
+              <h3 className="text-2xl font-bold mb-4 tracking-tight font-['Oswald',sans-serif] text-stalker-cream">
                 {edition.name}
               </h3>
-              <div className="text-4xl font-black mb-8">{edition.price}</div>
+              <div className="text-4xl font-bold mb-8 text-stalker-orange font-['Oswald',sans-serif]">
+                {edition.price}
+              </div>
 
               <ul className="space-y-3 mb-10">
                 {edition.features.map((feature) => (
-                  <li key={feature} className="text-gray-400 font-light flex items-start gap-3">
-                    <span className="text-white mt-1">•</span>
+                  <li key={feature} className="text-stalker-cream/50 font-light flex items-start gap-3">
+                    <span className="text-stalker-orange mt-1 text-sm">&#9670;</span>
                     {feature}
                   </li>
                 ))}
@@ -96,9 +104,9 @@ export function Editions() {
 
               <Button
                 variant={edition.isFeatured ? "default" : "outline"}
-                className="w-full tracking-wide"
+                className="w-full"
               >
-                PRE-ORDER
+                Pre-Order
               </Button>
             </motion.div>
           ))}

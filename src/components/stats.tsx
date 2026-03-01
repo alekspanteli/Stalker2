@@ -8,17 +8,17 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { value: "64 km²", label: "Square kilometers of seamless open world" },
+  { value: "64 km²", label: "Seamless open world to explore" },
   { value: "Non-linear", label: "Story with multiple endings" },
-  { value: "Advanced", label: "Day and night cycle with weather" },
-  { value: "Unique", label: "Blend of FPS, horror and immersive sim" },
+  { value: "A-Life 2.0", label: "Advanced AI ecosystem" },
+  { value: "Unique", label: "FPS, horror and immersive sim blend" },
 ];
 
 export function Stats() {
   return (
-    <section className="py-32 px-6 md:px-12 lg:px-20 bg-black">
-      <div className="max-w-[1920px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
+    <section className="py-24 px-6 md:px-12 bg-stalker-dark border-y border-stalker-cream/5">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {STATS.map((stat, index) => (
             <motion.div
               key={stat.value}
@@ -26,12 +26,12 @@ export function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15, duration: 0.8 }}
-              className="text-left"
+              className="text-center lg:text-left border-l-2 border-stalker-orange/40 pl-6"
             >
-              <div className="text-5xl md:text-6xl mb-4 font-black text-white tracking-tight">
+              <div className="text-4xl md:text-5xl mb-3 font-bold text-stalker-orange tracking-tight font-['Oswald',sans-serif]">
                 {stat.value}
               </div>
-              <div className="text-gray-400 font-light leading-relaxed max-w-xs">
+              <div className="text-stalker-cream/50 font-light leading-relaxed">
                 {stat.label}
               </div>
             </motion.div>

@@ -4,12 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center justify-center px-2 py-0.5 text-xs font-medium tracking-widest",
+  "inline-flex items-center justify-center px-3 py-1 text-xs font-medium tracking-widest uppercase font-['Oswald',sans-serif]",
   {
     variants: {
       variant: {
-        default: "text-white",
-        secondary: "text-gray-400",
+        default: "bg-stalker-orange/20 text-stalker-orange border border-stalker-orange/40",
+        secondary: "text-stalker-gray border border-stalker-gray/30",
       },
     },
     defaultVariants: {

@@ -1,39 +1,43 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <div id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div id="home" className="relative h-screen flex items-end justify-center overflow-hidden pb-24">
       <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1603012948341-3ba25e139d83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920"
-          alt="Nuclear Power Plant"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/20svideo.webm" type="video/webm" />
+          <source src="/videos/20svideo.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-stalker-dark via-stalker-dark/30 to-stalker-dark/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stalker-dark/40 to-transparent" />
       </div>
 
-      <div className="relative z-10 text-center px-6 max-w-7xl">
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="text-7xl md:text-8xl lg:text-[12rem] mb-8 tracking-tighter font-black text-white leading-none"
+      <div className="relative z-10 text-center px-6 max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2 }}
+          className="mb-6"
         >
-          STALKER 2
-        </motion.h1>
+          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold text-stalker-cream leading-none tracking-tight font-['Oswald',sans-serif]">
+            S.T.A.L.K.E.R. 2
+          </h1>
+        </motion.div>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="text-2xl md:text-3xl lg:text-4xl mb-4 text-white font-light tracking-wide"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-xl md:text-3xl lg:text-4xl mb-4 text-stalker-orange font-['Oswald',sans-serif] font-light tracking-[0.2em] uppercase"
         >
           Heart of Chornobyl
         </motion.p>
@@ -41,8 +45,8 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="text-lg md:text-xl mb-16 text-gray-300 max-w-3xl mx-auto font-light leading-relaxed"
+          transition={{ duration: 1, delay: 1 }}
+          className="text-base md:text-lg mb-12 text-stalker-cream/60 max-w-2xl mx-auto font-light leading-relaxed"
         >
           Discover the massive Chornobyl Exclusion Zone full of dangerous enemies, deadly anomalies and powerful artifacts
         </motion.p>
@@ -50,14 +54,14 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="flex flex-col sm:flex-row gap-6 justify-center"
+          transition={{ duration: 0.8, delay: 1.3 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <Button size="lg" className="tracking-wide">
-            PRE-ORDER NOW
+          <Button size="lg">
+            Pre-Order Now
           </Button>
-          <Button variant="outline" size="lg" className="tracking-wide">
-            WATCH TRAILER
+          <Button variant="outline" size="lg">
+            Watch Trailer
           </Button>
         </motion.div>
       </div>
@@ -65,14 +69,15 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.8 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 text-white text-sm tracking-widest"
+        transition={{ delay: 2 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-stalker-cream/30 flex justify-center pt-2"
         >
-          SCROLL
+          <motion.div className="w-1 h-2 bg-stalker-orange" />
         </motion.div>
       </motion.div>
     </div>

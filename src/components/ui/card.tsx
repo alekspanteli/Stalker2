@@ -7,7 +7,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card"
       className={cn(
-        "bg-black text-card-foreground flex flex-col border border-zinc-800 transition-all",
+        "bg-stalker-dark/80 text-card-foreground flex flex-col border border-stalker-cream/10 transition-all backdrop-blur-sm",
         className,
       )}
       {...props}
@@ -29,7 +29,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
   return (
     <h3
       data-slot="card-title"
-      className={cn("text-2xl font-black tracking-tight text-white", className)}
+      className={cn("text-2xl font-bold tracking-tight text-stalker-cream font-['Oswald',sans-serif]", className)}
       {...props}
     />
   );
@@ -39,7 +39,7 @@ function CardDescription({ className, ...props }: React.ComponentProps<"p">) {
   return (
     <p
       data-slot="card-description"
-      className={cn("text-gray-400 font-light", className)}
+      className={cn("text-stalker-gray font-light", className)}
       {...props}
     />
   );

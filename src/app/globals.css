@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
 @import 'tailwindcss' source(none);
 @source '../**/*.{js,ts,jsx,tsx}';
@@ -9,30 +9,30 @@
 
 :root {
   --font-size: 16px;
-  --background: #000000;
-  --foreground: #F3F3F5;
-  --card: #000000;
-  --card-foreground: #F3F3F5;
-  --popover: #000000;
-  --popover-foreground: #F3F3F5;
-  --primary: #ffffff;
-  --primary-foreground: #000000;
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: #F3F3F5;
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: #F3F3F5;
+  --background: #060605;
+  --foreground: #F2E8D9;
+  --card: #0a0a09;
+  --card-foreground: #F2E8D9;
+  --popover: #060605;
+  --popover-foreground: #F2E8D9;
+  --primary: #EE991A;
+  --primary-foreground: #060605;
+  --secondary: #1a1917;
+  --secondary-foreground: #F2E8D9;
+  --muted: #1a1917;
+  --muted-foreground: #8C8983;
+  --accent: #EE991A;
+  --accent-foreground: #060605;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
-  --border: oklch(0.269 0 0);
+  --border: hsla(36, 49%, 90%, 0.15);
   --input: transparent;
-  --input-background: oklch(0.205 0 0);
-  --switch-background: #cbced4;
+  --input-background: #0d0d0c;
+  --switch-background: #8C8983;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.439 0 0);
-  --radius: 0.625rem;
+  --ring: #EE991A;
+  --radius: 0px;
 }
 
 @theme inline {
@@ -57,16 +57,20 @@
   --color-input-background: var(--input-background);
   --color-switch-background: var(--switch-background);
   --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-stalker-orange: #EE991A;
+  --color-stalker-dark: #060605;
+  --color-stalker-cream: #F2E8D9;
+  --color-stalker-gray: #8C8983;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
 
   body {
@@ -75,5 +79,28 @@
 
   html {
     font-size: var(--font-size);
+    scroll-behavior: smooth;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060605;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff40;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff60;
 }

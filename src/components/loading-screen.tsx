@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 
 export function LoadingScreen({ children }: { children: React.ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,9 +34,7 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
             <div className="absolute inset-0 bg-stalker-dark" />
 
             {/* Preload image with pulse */}
-            <motion.img
-              src="/images/preload.png"
-              alt="Loading"
+            <motion.div
               className="relative z-10"
               animate={{
                 opacity: [0.6, 1, 0.6],
@@ -45,7 +44,16 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-            />
+            >
+              <Image
+                src="/images/preload.png"
+                alt="Loading"
+                width={320}
+                height={320}
+                className="h-auto w-auto max-w-[70vw]"
+                priority
+              />
+            </motion.div>
 
             {/* Loading bar */}
             <div className="relative z-10 mt-6 w-48">

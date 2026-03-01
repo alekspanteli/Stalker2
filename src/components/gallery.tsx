@@ -111,6 +111,9 @@ export function Gallery() {
         <DialogContent className="w-[95vw] max-w-[1400px] h-auto max-h-[90vh] p-0 border-0 bg-transparent">
           <VisuallyHidden.Root>
             <DialogPrimitive.Title>Image lightbox</DialogPrimitive.Title>
+            <DialogPrimitive.Description>
+              Preview and navigate gallery screenshots in a full-screen lightbox.
+            </DialogPrimitive.Description>
           </VisuallyHidden.Root>
           {selected && (
             <div className="relative">

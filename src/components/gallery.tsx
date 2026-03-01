@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { Container } from "@/components/ui/container";
 
 interface Screenshot {
   url: string;
@@ -36,8 +37,8 @@ const SCREENSHOTS: Screenshot[] = [
 
 export function Gallery() {
   return (
-    <section id="gallery" className="py-32 px-6 md:px-12 bg-[#0a0a09]">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="gallery" className="py-32 bg-[#0a0a09]">
+      <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +75,7 @@ export function Gallery() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Container } from "@/components/ui/container";
 import { cn } from "@/lib/utils";
 
 interface Edition {
@@ -46,8 +47,8 @@ const EDITIONS: Edition[] = [
 
 export function Editions() {
   return (
-    <section id="editions" className="py-32 px-6 md:px-12 bg-stalker-dark">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="editions" className="py-32 bg-stalker-dark">
+      <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,7 +112,7 @@ export function Editions() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

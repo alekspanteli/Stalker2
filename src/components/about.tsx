@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/ui/container";
 
 export function About() {
   return (
-    <section id="about" className="py-32 px-6 md:px-12 bg-stalker-dark">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="about" className="py-32 bg-stalker-dark">
+      <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -51,7 +52,7 @@ export function About() {
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-stalker-orange to-transparent" />
           </motion.div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

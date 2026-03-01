@@ -9,7 +9,9 @@
       "WebFetch(domain:store.steampowered.com)",
       "Bash(curl -s \"https://store.steampowered.com/api/appdetails?appids=1643320\")",
       "Bash(python3 -c \":*)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "WebFetch(domain:vectorseek.com)",
+      "Bash(curl -sL \"https://www.stalker2.com/stalker2/logos/logo-S2.png\" -o c:/myprojects/Stalker2/public/logo-S2.png)"
     ]
   }
 }

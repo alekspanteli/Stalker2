@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Container } from "@/components/ui/container";
 
 interface Stat {
   value: string;
@@ -16,8 +17,8 @@ const STATS: Stat[] = [
 
 export function Stats() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-stalker-dark border-y border-stalker-cream/5">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="py-24 bg-stalker-dark border-y border-stalker-cream/5">
+      <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {STATS.map((stat, index) => (
             <motion.div
@@ -37,7 +38,7 @@ export function Stats() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

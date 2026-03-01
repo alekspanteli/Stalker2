@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { Container } from "@/components/ui/container";
 
 interface Faction {
   name: string;
@@ -33,8 +34,8 @@ const FACTIONS: Faction[] = [
 
 export function Factions() {
   return (
-    <section id="factions" className="py-32 px-6 md:px-12 bg-stalker-dark">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="factions" className="py-32 bg-stalker-dark">
+      <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +83,7 @@ export function Factions() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
+import { Container } from "@/components/ui/container";
 
 interface Feature {
   image: string;
@@ -34,8 +35,8 @@ const FEATURES: Feature[] = [
 
 export function Features() {
   return (
-    <section id="features" className="py-32 px-6 md:px-12 bg-[#0a0a09]">
-      <div className="max-w-[1400px] mx-auto">
+    <section id="features" className="py-32 bg-[#0a0a09]">
+      <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +85,7 @@ export function Features() {
             </motion.div>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

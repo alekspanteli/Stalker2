@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,7 @@ const NAV_LINKS = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pendingScrollRef = useRef<string | null>(null);
 
   useEffect(() => {
     function handleScroll() {
@@ -72,7 +73,14 @@ export function Navigation() {
         </div>
       </Container>
 
-      <AnimatePresence>
+      <AnimatePresence
+        onExitComplete={() => {
+          if (pendingScrollRef.current) {
+            document.querySelector(pendingScrollRef.current)?.scrollIntoView({ behavior: "smooth" });
+            pendingScrollRef.current = null;
+          }
+        }}
+      >
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -85,7 +93,11 @@ export function Navigation() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    pendingScrollRef.current = link.href;
+                    setIsMobileMenuOpen(false);
+                  }}
                   className="block text-stalker-cream/70 hover:text-stalker-orange transition-colors text-lg py-2 font-[family-name:var(--font-oswald)] uppercase tracking-wider"
                 >
                   {link.name}

@@ -68,7 +68,7 @@ export function Footer() {
                 S.T.A.L.K.E.R. 2
               </h3>
             </div>
-            <p className="text-stalker-cream/40 font-light leading-relaxed mb-8 max-w-md">
+            <p className="text-stalker-cream/70 font-light leading-relaxed mb-8 max-w-md">
               S.T.A.L.K.E.R. 2: Heart of Chornobyl is a next-gen sequel to the award-winning PC game franchise developed by GSC Game World.
             </p>
             <div className="flex gap-3">
@@ -81,7 +81,7 @@ export function Footer() {
                   aria-label={social.name}
                   className="w-10 h-10 border border-stalker-cream/15 hover:border-stalker-orange hover:bg-stalker-orange/10 flex items-center justify-center transition-all duration-300 group"
                 >
-                  <span className="text-stalker-cream/40 group-hover:text-stalker-orange transition-colors duration-300">
+                  <span className="text-stalker-cream/70 group-hover:text-stalker-orange transition-colors duration-300">
                     {social.icon}
                   </span>
                 </a>
@@ -96,7 +96,7 @@ export function Footer() {
             <ul className="space-y-3">
               {GAME_LINKS.map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-stalker-cream/40 hover:text-stalker-orange transition-colors font-light text-sm">
+                  <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors font-light text-sm">
                     {link}
                   </a>
                 </li>
@@ -111,7 +111,7 @@ export function Footer() {
             <ul className="space-y-3">
               {SUPPORT_LINKS.map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-stalker-cream/40 hover:text-stalker-orange transition-colors font-light text-sm">
+                  <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors font-light text-sm">
                     {link}
                   </a>
                 </li>
@@ -123,7 +123,7 @@ export function Footer() {
             <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
               Newsletter
             </h4>
-            <p className="text-stalker-cream/40 font-light mb-4 text-sm">
+            <p className="text-stalker-cream/70 font-light mb-4 text-sm">
               Get the latest news and updates from the Zone
             </p>
             <div className="flex gap-2">
@@ -137,12 +137,12 @@ export function Footer() {
 
         <Separator className="mb-8 bg-stalker-cream/5" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stalker-cream/30">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-stalker-cream/70">
           <p>&copy; {new Date().getFullYear()} GSC Game World. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-stalker-orange transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-stalker-orange transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-stalker-orange transition-colors">Cookie Policy</a>
+            <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors">Privacy Policy</a>
+            <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors">Terms of Service</a>
+            <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors">Cookie Policy</a>
           </div>
         </div>
       </Container>

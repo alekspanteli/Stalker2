@@ -12,10 +12,14 @@ export function Hero() {
           muted
           loop
           playsInline
+          preload="metadata"
+          poster="/images/gallery-zone-landscape.jpg"
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/videos/20svideo.webm" type="video/webm" />
           <source src="/videos/20svideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-stalker-dark via-stalker-dark/30 to-stalker-dark/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-stalker-dark/40 to-transparent" />

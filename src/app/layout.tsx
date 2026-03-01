@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl — Official Website",
   description:
     "Discover the massive Chornobyl Exclusion Zone full of dangerous enemies, deadly anomalies and powerful artifacts. Pre-order now.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo-S2.png",
+  },
   openGraph: {
     title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
     description:

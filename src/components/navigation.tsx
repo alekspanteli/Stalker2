@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 
@@ -41,10 +42,13 @@ export function Navigation() {
       <Container>
         <div className="flex items-center justify-between h-20 gap-8">
           <a href="#" className="flex-shrink-0 flex items-center">
-            <img
+            <Image
               src="/logo-S2.png"
               alt="S.T.A.L.K.E.R. 2"
-              className="h-10 w-auto"
+              width={160}
+              height={40}
+              priority
+              style={{ width: 160, height: 40 }}
             />
           </a>
 

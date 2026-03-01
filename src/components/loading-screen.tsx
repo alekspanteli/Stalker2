@@ -22,11 +22,13 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      {children}
+
       <AnimatePresence>
         {isLoading && (
           <motion.div
             key="loading-screen"
-            className="fixed inset-0 z-[9999] flex flex-col items-center justify-center"
+            className="pointer-events-none fixed inset-0 z-[9999] flex flex-col items-center justify-center"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
           >
@@ -76,15 +78,6 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <div
-        style={{
-          opacity: isLoading ? 0 : 1,
-          transition: "opacity 0.3s ease-in-out",
-        }}
-      >
-        {children}
-      </div>
     </>
   );
 }

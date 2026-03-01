@@ -20,24 +20,24 @@ interface Screenshot {
 
 const SCREENSHOTS: Screenshot[] = [
   {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_b26b36c06b2e1bb637d616c7b0a2226c18e3d467.1920x1080.jpg?t=1771271884",
+    url: "/images/gallery-zone-landscape.jpg",
     alt: "The Zone landscape",
     span: "md:col-span-2",
   },
   {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_3e81b58486b73000a8e3fde80c6843d6215bedef.1920x1080.jpg?t=1771271884",
+    url: "/images/gallery-combat.jpg",
     alt: "Combat encounter",
   },
   {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_1fe5db2c19c1deb43e442149760327db8b6876bd.1920x1080.jpg?t=1771271884",
+    url: "/images/gallery-exploring.jpg",
     alt: "Exploring the exclusion zone",
   },
   {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_3d1db6aef02f006c4876ab6c5286128a411b93c8.1920x1080.jpg?t=1771271884",
+    url: "/images/gallery-anomaly-fields.jpg",
     alt: "Anomaly fields",
   },
   {
-    url: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_391a21364954e497894310f1980947ebf6f3182b.1920x1080.jpg?t=1771271884",
+    url: "/images/gallery-open-world-vista.jpg",
     alt: "Open world vista",
     span: "md:col-span-2",
   },
@@ -73,10 +73,10 @@ export function Gallery() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-['Oswald',sans-serif] font-light mb-4 block">
+          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-[family-name:var(--font-oswald)] font-light mb-4 block">
             Screenshots
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight font-['Oswald',sans-serif] text-stalker-cream">
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight font-[family-name:var(--font-oswald)] text-stalker-cream">
             <span className="text-stalker-orange">MEDIA</span> GALLERY
           </h2>
         </motion.div>
@@ -144,7 +144,7 @@ export function Gallery() {
               </div>
 
               {/* Caption */}
-              <p className="text-stalker-cream/60 text-sm font-['Oswald',sans-serif] tracking-wider text-center mt-3">
+              <p className="text-stalker-cream/60 text-sm font-[family-name:var(--font-oswald)] tracking-wider text-center mt-3">
                 {selected.alt}
                 <span className="text-stalker-cream/30 ml-3">
                   {selectedIndex! + 1} / {SCREENSHOTS.length}

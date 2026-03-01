@@ -1,6 +1,21 @@
 import type { Metadata } from "next";
+import { Oswald, Rubik } from "next/font/google";
 import { LoadingScreen } from "@/components/loading-screen";
 import "./globals.css";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-oswald",
+  display: "swap",
+});
+
+const rubik = Rubik({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-rubik",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "S.T.A.L.K.E.R. 2: Heart of Chornobyl — Official Website",
@@ -21,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-stalker-dark text-stalker-cream antialiased">
+      <body className={`${oswald.variable} ${rubik.variable} min-h-screen bg-stalker-dark text-stalker-cream antialiased`}>
         <LoadingScreen>{children}</LoadingScreen>
       </body>
     </html>

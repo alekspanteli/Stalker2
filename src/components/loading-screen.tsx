@@ -34,7 +34,7 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
 
             {/* Preload image with pulse */}
             <motion.img
-              src="https://www.stalker2.com/stalker2/preload.png"
+              src="/images/preload.png"
               alt="Loading"
               className="relative z-10"
               animate={{
@@ -61,7 +61,7 @@ export function LoadingScreen({ children }: { children: React.ReactNode }) {
                   }}
                 />
               </div>
-              <p className="mt-3 text-center font-oswald text-[10px] tracking-[0.3em] text-stalker-gray/60 uppercase">
+              <p className="mt-3 text-center font-[family-name:var(--font-oswald)] text-[10px] tracking-[0.3em] text-stalker-gray/60 uppercase">
                 Loading
               </p>
             </div>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
-
 @import 'tailwindcss' source(none);
 @source '../**/*.{js,ts,jsx,tsx}';
 
@@ -70,7 +68,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: var(--font-rubik), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   }
 
   body {
@@ -84,7 +82,7 @@
 
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    font-family: var(--font-oswald), 'Arial Narrow', sans-serif;
   }
 }
 

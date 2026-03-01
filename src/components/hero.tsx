@@ -28,7 +28,7 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 0.2 }}
           className="mb-6"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold text-stalker-cream leading-none tracking-tight font-['Oswald',sans-serif]">
+          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold text-stalker-cream leading-none tracking-tight font-[family-name:var(--font-oswald)]">
             S.T.A.L.K.E.R. 2
           </h1>
         </motion.div>
@@ -37,7 +37,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-xl md:text-3xl lg:text-4xl mb-4 text-stalker-orange font-['Oswald',sans-serif] font-light tracking-[0.2em] uppercase"
+          className="text-xl md:text-3xl lg:text-4xl mb-4 text-stalker-orange font-[family-name:var(--font-oswald)] font-light tracking-[0.2em] uppercase"
         >
           Heart of Chornobyl
         </motion.p>

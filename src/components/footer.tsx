@@ -64,7 +64,7 @@ export function Footer() {
               <svg viewBox="0 0 24 24" className="w-7 h-7 text-stalker-orange" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3.14.69 4.22 1.78L13.41 9.6A2.98 2.98 0 0 0 12 9c-.5 0-.97.12-1.41.34L7.78 6.78A6.96 6.96 0 0 1 12 5zm-7 7c0-1.66.69-3.14 1.78-4.22l2.82 2.81A2.98 2.98 0 0 0 9 12c0 .5.12.97.34 1.41l-2.56 2.81A6.96 6.96 0 0 1 5 12zm7 7a6.96 6.96 0 0 1-4.22-1.78l2.82-2.82c.44.22.91.34 1.41.34s.97-.12 1.41-.34l2.82 2.82A6.96 6.96 0 0 1 12 19zm0-5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.66 2.72l-2.56-2.81c.22-.44.34-.91.34-1.41s-.12-.97-.34-1.41l2.82-2.82A6.96 6.96 0 0 1 19 12c0 1.66-.69 3.14-1.78 4.22z"/>
               </svg>
-              <h3 className="text-2xl font-bold tracking-tight font-['Oswald',sans-serif] text-stalker-cream">
+              <h3 className="text-2xl font-bold tracking-tight font-[family-name:var(--font-oswald)] text-stalker-cream">
                 S.T.A.L.K.E.R. 2
               </h3>
             </div>
@@ -90,7 +90,7 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-['Oswald',sans-serif] uppercase">
+            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
               Game
             </h4>
             <ul className="space-y-3">
@@ -105,7 +105,7 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-['Oswald',sans-serif] uppercase">
+            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
               Support
             </h4>
             <ul className="space-y-3">
@@ -120,7 +120,7 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-['Oswald',sans-serif] uppercase">
+            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
               Newsletter
             </h4>
             <p className="text-stalker-cream/40 font-light mb-4 text-sm">

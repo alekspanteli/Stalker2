@@ -42,10 +42,10 @@ export function Factions() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-['Oswald',sans-serif] font-light mb-4 block">
+          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-[family-name:var(--font-oswald)] font-light mb-4 block">
             The Zone&apos;s Inhabitants
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 font-['Oswald',sans-serif] text-stalker-cream">
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 font-[family-name:var(--font-oswald)] text-stalker-cream">
             CHOOSE YOUR <span className="text-stalker-orange">FACTION</span>
           </h2>
           <p className="text-stalker-cream/50 text-lg font-light max-w-2xl">
@@ -72,7 +72,7 @@ export function Factions() {
                 style={{ background: `radial-gradient(circle at top, ${faction.color}, transparent 70%)` }}
               />
               <h3
-                className="text-2xl font-bold mb-4 tracking-tight font-['Oswald',sans-serif] transition-colors duration-300"
+                className="text-2xl font-bold mb-4 tracking-tight font-[family-name:var(--font-oswald)] transition-colors duration-300"
                 style={{ color: faction.color }}
               >
                 {faction.name}

@@ -13,7 +13,18 @@
       "WebFetch(domain:vectorseek.com)",
       "Bash(curl -sL \"https://www.stalker2.com/stalker2/logos/logo-S2.png\" -o c:/myprojects/Stalker2/public/logo-S2.png)",
       "Bash(npm install @radix-ui/react-visually-hidden)",
-      "Bash(ls -la \"c:\\\\myprojects\\\\Stalker2\\\\src\"\" 2>/dev/null || echo \"src directory structure failed \")"
+      "Bash(ls -la \"c:\\\\myprojects\\\\Stalker2\\\\src\"\" 2>/dev/null || echo \"src directory structure failed \")",
+      "Bash(curl -sL -o feature-immersive-sim.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_8d05d42210c72480ca9124af1f5e37c72d0b8616.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o feature-deadly-anomalies.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_9e6718fbf965951c519a1fbe300bcfce85b2ea2f.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o feature-epic-open-world.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_f58915a4b031270732320aaba0f6905c50ed14c3.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o feature-faction-warfare.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_33db24b3dddd9e823e6556a739141c3f9ffd45e8.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o gallery-zone-landscape.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_b26b36c06b2e1bb637d616c7b0a2226c18e3d467.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o gallery-combat.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_3e81b58486b73000a8e3fde80c6843d6215bedef.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o gallery-exploring.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_1fe5db2c19c1deb43e442149760327db8b6876bd.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o gallery-anomaly-fields.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_3d1db6aef02f006c4876ab6c5286128a411b93c8.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o gallery-open-world-vista.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_391a21364954e497894310f1980947ebf6f3182b.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o about-exploring-zone.jpg \"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_8589bf4f88762910952fd0f1c3f6072d31f27aad.1920x1080.jpg?t=1771271884\")",
+      "Bash(curl -sL -o preload.png \"https://www.stalker2.com/stalker2/preload.png\")"
     ]
   }
 }

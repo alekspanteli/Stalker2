@@ -55,10 +55,10 @@ export function Editions() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-['Oswald',sans-serif] font-light mb-4 block">
+          <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-[family-name:var(--font-oswald)] font-light mb-4 block">
             Available Now
           </span>
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 font-['Oswald',sans-serif] text-stalker-cream">
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 font-[family-name:var(--font-oswald)] text-stalker-cream">
             PRE-ORDER <span className="text-stalker-orange">NOW</span>
           </h2>
           <p className="text-stalker-cream/50 text-lg font-light max-w-2xl mx-auto">
@@ -87,10 +87,10 @@ export function Editions() {
                   <Badge className="mb-6">Most Popular</Badge>
                 </>
               )}
-              <h3 className="text-2xl font-bold mb-4 tracking-tight font-['Oswald',sans-serif] text-stalker-cream">
+              <h3 className="text-2xl font-bold mb-4 tracking-tight font-[family-name:var(--font-oswald)] text-stalker-cream">
                 {edition.name}
               </h3>
-              <div className="text-4xl font-bold mb-8 text-stalker-orange font-['Oswald',sans-serif]">
+              <div className="text-4xl font-bold mb-8 text-stalker-orange font-[family-name:var(--font-oswald)]">
                 {edition.price}
               </div>
 

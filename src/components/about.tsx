@@ -16,10 +16,10 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-['Oswald',sans-serif] font-light mb-4 block">
+            <span className="text-stalker-orange text-sm tracking-[0.3em] uppercase font-[family-name:var(--font-oswald)] font-light mb-4 block">
               About the Game
             </span>
-            <h2 className="text-5xl md:text-7xl mb-8 font-bold leading-tight tracking-tight font-['Oswald',sans-serif] text-stalker-cream">
+            <h2 className="text-5xl md:text-7xl mb-8 font-bold leading-tight tracking-tight font-[family-name:var(--font-oswald)] text-stalker-cream">
               A STORY OF<br />
               <span className="text-stalker-orange">YOUR OWN</span>
             </h2>
@@ -42,7 +42,7 @@ export function About() {
             className="relative h-[600px] border border-stalker-cream/10"
           >
             <Image
-              src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1643320/ss_8589bf4f88762910952fd0f1c3f6072d31f27aad.1920x1080.jpg?t=1771271884"
+              src="/images/about-exploring-zone.jpg"
               alt="Stalker exploring the Zone"
               fill
               className="object-cover"

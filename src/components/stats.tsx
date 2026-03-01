@@ -29,7 +29,7 @@ export function Stats() {
               transition={{ delay: index * 0.15, duration: 0.8 }}
               className="text-center lg:text-left border-l-2 border-stalker-orange/40 pl-6"
             >
-              <div className="text-4xl md:text-5xl mb-3 font-bold text-stalker-orange tracking-tight font-['Oswald',sans-serif]">
+              <div className="text-4xl md:text-5xl mb-3 font-bold text-stalker-orange tracking-tight font-[family-name:var(--font-oswald)]">
                 {stat.value}
               </div>
               <div className="text-stalker-cream/50 font-light leading-relaxed">

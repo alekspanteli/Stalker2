@@ -52,7 +52,7 @@ export function Navigation() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-stalker-cream/70 hover:text-stalker-orange transition-colors text-sm tracking-wider uppercase font-['Oswald',sans-serif] font-light relative group"
+                className="text-stalker-cream/70 hover:text-stalker-orange transition-colors text-sm tracking-wider uppercase font-[family-name:var(--font-oswald)] font-light relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-stalker-orange group-hover:w-full transition-all duration-300" />
@@ -86,7 +86,7 @@ export function Navigation() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-stalker-cream/70 hover:text-stalker-orange transition-colors text-lg py-2 font-['Oswald',sans-serif] uppercase tracking-wider"
+                  className="block text-stalker-cream/70 hover:text-stalker-orange transition-colors text-lg py-2 font-[family-name:var(--font-oswald)] uppercase tracking-wider"
                 >
                   {link.name}
                 </a>

@@ -22,9 +22,16 @@ export function Navigation() {
 
   useEffect(() => {
     function handleScroll() {
-      setIsScrolled(window.scrollY > 50);
+      const currentY = window.scrollY;
+      setIsScrolled((prev) => {
+        if (prev) {
+          return currentY > 20;
+        }
+        return currentY > 70;
+      });
     }
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -33,10 +40,10 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-500 ${
         isScrolled
-          ? "bg-stalker-dark/95 backdrop-blur-md border-b border-stalker-cream/10"
-          : "bg-gradient-to-b from-stalker-dark/80 to-transparent"
+          ? "bg-stalker-dark/95 backdrop-blur-md border-stalker-cream/10"
+          : "bg-gradient-to-b from-stalker-dark/80 to-transparent border-transparent"
       }`}
     >
       <Container>

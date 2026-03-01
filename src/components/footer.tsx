@@ -54,6 +54,31 @@ const SOCIAL_LINKS = [
   },
 ] as const;
 
+function FooterLinksColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: readonly string[];
+}) {
+  return (
+    <div className="md:col-span-2">
+      <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
+        {title}
+      </h4>
+      <ul className="space-y-3">
+        {links.map((link) => (
+          <li key={link}>
+            <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors font-light text-sm">
+              {link}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="py-20 bg-stalker-dark border-t border-stalker-cream/10">
@@ -89,35 +114,9 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-2">
-            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
-              Game
-            </h4>
-            <ul className="space-y-3">
-              {GAME_LINKS.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors font-light text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterLinksColumn title="Game" links={GAME_LINKS} />
 
-          <div className="md:col-span-2">
-            <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">
-              Support
-            </h4>
-            <ul className="space-y-3">
-              {SUPPORT_LINKS.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-stalker-cream/70 hover:text-stalker-orange transition-colors font-light text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterLinksColumn title="Support" links={SUPPORT_LINKS} />
 
           <div className="md:col-span-3">
             <h4 className="mb-6 font-bold tracking-wider text-sm text-stalker-orange font-[family-name:var(--font-oswald)] uppercase">

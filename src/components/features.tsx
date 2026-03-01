@@ -1,16 +1,11 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Container } from "@/components/ui/container";
-import {
-  Dialog,
-  DialogContent,
-  DialogClose,
-} from "@/components/ui/dialog";
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { ImageLightbox } from "@/components/image-lightbox";
+import { useLightboxNavigation } from "@/lib/use-lightbox-navigation";
 
 interface Feature {
   image: string;
@@ -46,19 +41,11 @@ export function Features() {
   const [imageLoaded, setImageLoaded] = useState(false);
   const isOpen = selectedIndex !== null;
 
-  const navigate = useCallback(
-    (direction: 1 | -1) => {
-      setImageLoaded(false);
-      setSelectedIndex((prev) => {
-        if (prev === null) return null;
-        const next = prev + direction;
-        if (next < 0) return FEATURES.length - 1;
-        if (next >= FEATURES.length) return 0;
-        return next;
-      });
-    },
-    []
-  );
+  const { navigate } = useLightboxNavigation({
+    itemCount: FEATURES.length,
+    setSelectedIndex,
+    setImageLoaded,
+  });
 
   const selected = selectedIndex !== null ? FEATURES[selectedIndex] : null;
 
@@ -116,77 +103,20 @@ export function Features() {
         </div>
       </Container>
 
-      {/* Lightbox Dialog */}
-      <Dialog open={isOpen} onOpenChange={(open) => !open && setSelectedIndex(null)}>
-        <DialogContent className="w-[95vw] max-w-[1400px] h-auto max-h-[90vh] p-0 border-0 bg-transparent">
-          <VisuallyHidden.Root>
-            <DialogPrimitive.Title>Feature image lightbox</DialogPrimitive.Title>
-            <DialogPrimitive.Description>
-              Preview and navigate feature images in a full-screen lightbox.
-            </DialogPrimitive.Description>
-          </VisuallyHidden.Root>
-          {selected && (
-            <div className="relative">
-              {/* Close button */}
-              <DialogClose className="absolute -top-10 right-0 z-10 text-stalker-cream/70 hover:text-stalker-orange transition-colors cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </DialogClose>
-
-              {/* Image */}
-              <div className="relative w-full aspect-video">
-                {!imageLoaded && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="animate-spin h-8 w-8 text-stalker-orange" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                  </div>
-                )}
-                <Image
-                  src={selected.image}
-                  alt={selected.title}
-                  fill
-                  className={`object-contain transition-opacity duration-300 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
-                  sizes="95vw"
-                  priority
-                  onLoad={() => setImageLoaded(true)}
-                />
-              </div>
-
-              {/* Caption */}
-              <p className="text-stalker-cream/60 text-sm font-[family-name:var(--font-oswald)] tracking-wider text-center mt-3">
-                {selected.title}
-                <span className="text-stalker-cream/30 ml-3">
-                  {selectedIndex! + 1} / {FEATURES.length}
-                </span>
-              </p>
-
-              {/* Prev / Next buttons */}
-              <button
-                onClick={() => navigate(-1)}
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-stalker-dark/60 hover:bg-stalker-orange/80 text-stalker-cream p-2 transition-colors cursor-pointer"
-                aria-label="Previous image"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="15 18 9 12 15 6" />
-                </svg>
-              </button>
-              <button
-                onClick={() => navigate(1)}
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-stalker-dark/60 hover:bg-stalker-orange/80 text-stalker-cream p-2 transition-colors cursor-pointer"
-                aria-label="Next image"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
-            </div>
-          )}
-        </DialogContent>
-      </Dialog>
+      <ImageLightbox
+        open={isOpen}
+        onOpenChange={(open) => !open && setSelectedIndex(null)}
+        imageSrc={selected?.image ?? null}
+        imageAlt={selected?.title ?? null}
+        imageLoaded={imageLoaded}
+        onImageLoad={() => setImageLoaded(true)}
+        onPrev={() => navigate(-1)}
+        onNext={() => navigate(1)}
+        caption={selected?.title ?? ""}
+        counter={`${selectedIndex !== null ? selectedIndex + 1 : 0} / ${FEATURES.length}`}
+        dialogTitle="Feature image lightbox"
+        dialogDescription="Preview and navigate feature images in a full-screen lightbox."
+      />
     </section>
   );
 }

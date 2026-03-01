@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Container } from "@/components/ui/container";
-import { ImageLightbox } from "@/components/image-lightbox";
+import { Lightbox } from "@/components/lightbox";
 import { useLightboxNavigation } from "@/lib/use-lightbox-navigation";
 
 interface Screenshot {
@@ -93,7 +93,8 @@ export function Gallery() {
         </div>
       </Container>
 
-      <ImageLightbox
+      <Lightbox
+        variant="image"
         open={isOpen}
         onOpenChange={(open) => !open && setSelectedIndex(null)}
         imageSrc={selected?.url ?? null}

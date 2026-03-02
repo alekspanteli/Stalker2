@@ -72,11 +72,15 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   html {
     font-size: var(--font-size);
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
